@@ -19,12 +19,12 @@
 
 
 // React -
-const a = [1, 2, 3, 4]// ссылка на ячуйку памяти, в которой лежит объект
-a.push(5) //мутация, изменения
-console.log(a)
-
-const b = [1, 2, 3, 4] //переносим содержимое исходного массива или копируем
-b.push(5)
+// const a = [1, 2, 3, 4]// ссылка на ячуйку памяти, в которой лежит объект
+// a.push(5) //мутация, изменения
+// console.log(a)
+//
+// const b = [1, 2, 3, 4] //переносим содержимое исходного массива или копируем
+// b.push(5)
 
 
 function logger(prev, current) {
@@ -56,7 +56,7 @@ function logger(prev, current) {
 
 logger(a, b)
 
-////////////////////
+/////////////////////////////////////////////////////////////////////
 
 const students = [ // prev student
     {
@@ -95,3 +95,28 @@ const CopySt2 = CopySt.map(st => {
 //delete Julia
 
 const CopySt3 = CopySt2.filter(st => st.name !== "Julia") // new Array
+
+
+// handler === listener === subscriber => function
+// handler c(подмножество) callback
+// callback  => use in handler , use handler in setTimeout/setInterval, param of arrays  method
+// onClick = handler; handler({   always pass obj})
+//{... } - event or ev or e
+
+const sm = document.getElementById("small")
+const md = document.getElementById("middle")
+const  bg= document.getElementById("big")
+const handler1 = (e) => {
+    console.log(e)
+}
+const handler2 = (e) => {
+    alert(e)
+}
+
+// sm.onclick = handler1
+// sm.onclick = handler2
+
+// sm.addEventListener("click", handler1)
+// sm.addEventListener("click", handler2)
+// sm.removeEventListener("click", handler1)
+// sm.removeEventListener("click", handler2)
